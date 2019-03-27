@@ -1,0 +1,41 @@
+.banner{
+background:#A9A9A9;
+max-width:505px;
+width:505px;
+height:500px;
+border:2px solid black;
+border-radius:20px;
+}
+.heading{
+max-width:480px;
+}
+div.banner   div.inside{
+position:relative;
+right:-10px;
+}
+/*#fileid{
+background:blue;
+color:yellow;
+width:150px;
+height:50px;
+border: 1px solid #ccc;
+display: inline-block;
+padding: 6px 12px;
+cursor: pointer;
+border-radius:10px;
+}*/
+.next{
+background:blue;
+color:yellow;
+width:200px;
+height:50px;
+border: 1px solid #ccc;
+display: inline-block;
+padding: 6px 12px;
+cursor: pointer;
+border-radius:10px;
+position:relative;
+right:-120px;
+top:20px;
+}
+

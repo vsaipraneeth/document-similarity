@@ -1,0 +1,55 @@
+<html>
+   <head>
+      <title>Semantics</title>
+	  <style>
+	 
+	  </style>
+	  <link href="../static/css/index.css" rel="stylesheet" type="text/css">
+	  <link href="../static/css/w3.css" rel="stylesheet" type="text/css">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+   </head>
+   
+   <body style="background-image:url(../static/images/data.jpg)">
+      <div class="banner w3-display-middle">
+	  <div class="inside">
+	  <h3 class="w3-panel w3-teal heading" style="border-radius:20px">Text Clustering Using Semantic Similarity Approach</h3>
+      Select a file to upload: <br />
+      <form action = "Browse1"  method = "POST" enctype = "multipart/form-data">
+		 <input type = "file"  name = "file1" size = "50" id="file" onchange="read()" /><br><br/>
+		 <textarea rows="10" cols="50" id="result" style="border-radius:10px" placeholder="File contents goes here"></textarea>
+         <br />
+         <input type = "submit" value = "next"  class="next"/>
+      </form>
+	  </div>
+	  </div>
+
+<script>
+  function read()
+{
+  var file = document.getElementById('file').files[0];
+  if(file)
+	{
+    var reader;
+	try
+	{
+    reader = new FileReader();
+	}catch(e)
+	{
+		document.getElementById('result').innerHTML = 
+			"Error: seems File API is not supported on your browser";
+	  return;
+  }
+  reader.readAsText(file, "UTF-8");
+  reader.onload = loaded;
+  }
+}
+
+function loaded(evt)
+{
+  // Obtain the read file data    
+  var fileString = evt.target.result;
+  document.getElementById('result').innerHTML = fileString;
+}
+  </script>
+   </body>
+   

@@ -1,0 +1,14 @@
+.banner{
+background:#A9A9A9;
+max-width:520px;
+max-height:500px;
+border:2px solid black;
+border-radius:20px;
+}
+.heading{
+max-width:480px;
+}
+.inside{
+position:relative;
+left:40px;
+}

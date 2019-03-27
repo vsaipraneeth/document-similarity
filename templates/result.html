@@ -1,0 +1,32 @@
+<html>
+<body style="background:orange">
+   <head>
+      <title>Semantics</title>
+	  <style>
+	 
+	  </style>
+	  <link href="../static/css/result.css" rel="stylesheet" type="text/css">
+	  <link href="../static/css/w3.css" rel="stylesheet" type="text/css">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+   </head>
+   
+  <body >
+      <div class="banner w3-display-middle">
+	  <h3 class="w3-panel w3-teal heading" style="border-radius:20px">Text Clustering Using Semantic Similarity Approach</h3>
+	<div class="inside">  
+	  {% if cs!=0%} 
+		<h2>Cosine Similarity is :{{cs}}</h2>
+	 {% endif %}
+	 {% if js!=0%} 
+		<h2>Jaccard Similarity is :{{js}}</h2>
+	 {% endif %}
+	{% if ed!=0%} 
+		<h2>Euclidean Distance is :{{ed}}</h2>
+	{% endif %}
+    {% if sem!=0%} 
+		<h2>Semantic Similarity is :{{sem}}</h2>
+	{% endif %}
+	</div>
+</div>
+</body>
+</html>

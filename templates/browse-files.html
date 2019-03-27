@@ -1,0 +1,51 @@
+<html>
+   <head>
+      <title>Semantics</title>
+	  <style>
+	  
+	  </style>
+	  <link href="../static/css/index3.css?q=1280549780" rel="stylesheet" type="text/css">
+	  <link href="../static/css/w3.css" rel="stylesheet" type="text/css">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+   </head>
+   
+   <body style="background-image:url(../static/images/data.jpg)">
+      <div class="banner w3-display-middle">
+	  <div class="inside">
+	  <h3 class="w3-panel w3-teal heading " style="border-radius:20px">Text Clustering Using Semantic Similarity Approach</h3>
+      <div class="w3-row parts">     
+	 <div class=" w3-half w3-container part1">
+	  <h4>
+	  <br>{{file1}}</h4>
+		 <textarea rows="12" cols="30" id="result" style="border-radius:10px" placeholder="File contents goes here">{{content1}}</textarea>
+	  </div>
+	 <div class=" w3-half w3-container part2">
+	  <h4>
+	  <br>{{file2}}</h4>
+		 <textarea rows="12" cols="30" id="result" style="border-radius:10px" placeholder="File contents goes here">{{content2}}</textarea>
+	  </div>
+	  </div>
+	  </div>
+	 <form action = "Result" method="POST" enctype = "multipart/form-data"> 
+	  <select name="alg" class="selectAlg" onchange="add_input(this.value)">	  
+	   <option value="Semantic Similarity">Semantic Similarity</option>
+	   <option value="Cosine Similarity">Cosine Similarity</option>
+	   <option value="Jaccard Similarity">Jaccard Similarity</option>
+	   <option value="Euclidean Distance">Euclidean Distance</option>
+	   <option value="All">All</option>
+	  </select>
+	  <input type="text" id="keyword" name="keywords" style="display:none;" class="keyword" placeholder="Enter Keywords"><br/>
+	  <input type="submit" value="process"  class="next"/>
+	  </form>
+	  </div>
+<script>
+function add_input(val){
+//alert(val);
+if(val!="Semantic Similarity")
+document.getElementById('keyword').style.display='block';
+else
+document.getElementById('keyword').style.display='none';
+}
+</script>
+   </body>
+</html>   
